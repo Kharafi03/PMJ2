@@ -44,4 +44,9 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    public function busMaintenances()
+    {
+        return $this->hasMany(BusMaintenance::class, 'id_user');
+    }
 }
